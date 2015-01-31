@@ -1,0 +1,85 @@
+
+leds_elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	e3a00453 	mov	r0, #1392508928	; 0x53000000
+   4:	e3a01000 	mov	r1, #0	; 0x0
+   8:	e5801000 	str	r1, [r0]
+   c:	e3a0da01 	mov	sp, #4096	; 0x1000
+  10:	eb000000 	bl	18 <atime>
+
+00000014 <halt_loop>:
+  14:	eafffffe 	b	14 <halt_loop>
+
+00000018 <atime>:
+  18:	e3a03456 	mov	r3, #1442840576	; 0x56000000
+  1c:	e3a01000 	mov	r1, #0	; 0x0
+  20:	e3a02b55 	mov	r2, #87040	; 0x15400
+  24:	e5831050 	str	r1, [r3, #80]
+  28:	e5831058 	str	r1, [r3, #88]
+  2c:	e5832010 	str	r2, [r3, #16]
+  30:	e1a02003 	mov	r2, r3
+  34:	e5921054 	ldr	r1, [r2, #84]
+  38:	e3110001 	tst	r1, #1	; 0x1
+  3c:	15923014 	ldrne	r3, [r2, #20]
+  40:	05923014 	ldreq	r3, [r2, #20]
+  44:	13833020 	orrne	r3, r3, #32	; 0x20
+  48:	03c33020 	biceq	r3, r3, #32	; 0x20
+  4c:	15823014 	strne	r3, [r2, #20]
+  50:	05823014 	streq	r3, [r2, #20]
+  54:	e3110002 	tst	r1, #2	; 0x2
+  58:	15923014 	ldrne	r3, [r2, #20]
+  5c:	05923014 	ldreq	r3, [r2, #20]
+  60:	13833040 	orrne	r3, r3, #64	; 0x40
+  64:	03c33040 	biceq	r3, r3, #64	; 0x40
+  68:	15823014 	strne	r3, [r2, #20]
+  6c:	05823014 	streq	r3, [r2, #20]
+  70:	e3110004 	tst	r1, #4	; 0x4
+  74:	15923014 	ldrne	r3, [r2, #20]
+  78:	05923014 	ldreq	r3, [r2, #20]
+  7c:	13833080 	orrne	r3, r3, #128	; 0x80
+  80:	03c33080 	biceq	r3, r3, #128	; 0x80
+  84:	15823014 	strne	r3, [r2, #20]
+  88:	05823014 	streq	r3, [r2, #20]
+  8c:	e3110010 	tst	r1, #16	; 0x10
+  90:	15923014 	ldrne	r3, [r2, #20]
+  94:	05923014 	ldreq	r3, [r2, #20]
+  98:	13833c01 	orrne	r3, r3, #256	; 0x100
+  9c:	03c33c01 	biceq	r3, r3, #256	; 0x100
+  a0:	15823014 	strne	r3, [r2, #20]
+  a4:	05823014 	streq	r3, [r2, #20]
+  a8:	eaffffe1 	b	34 <atime+0x1c>
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00002541 	andeq	r2, r0, r1, asr #10
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	0000001b 	andeq	r0, r0, fp, lsl r0
+  10:	00543405 	subseq	r3, r4, r5, lsl #8
+  14:	01080206 	tsteq	r8, r6, lsl #4
+  18:	04120109 	ldreq	r0, [r2], #-265
+  1c:	01150114 	tsteq	r5, r4, lsl r1
+  20:	01180317 	tsteq	r8, r7, lsl r3
+  24:	Address 0x00000024 is out of bounds.
+
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	43434700 	movtmi	r4, #14080	; 0x3700
+   4:	5328203a 	.word	0x5328203a
+   8:	6372756f 	.word	0x6372756f
+   c:	20797265 	.word	0x20797265
+  10:	202b2b47 	.word	0x202b2b47
+  14:	6574694c 	.word	0x6574694c
+  18:	30303220 	.word	0x30303220
+  1c:	2d317139 	.word	0x2d317139
+  20:	29363731 	.word	0x29363731
+  24:	332e3420 	.word	0x332e3420
+  28:	Address 0x00000028 is out of bounds.
+
