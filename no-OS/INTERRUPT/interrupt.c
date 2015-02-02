@@ -1,4 +1,4 @@
-#include "s3c24xx.h"
+#include "s3c2440.h"
 
 void EINT_Handle()
 {
