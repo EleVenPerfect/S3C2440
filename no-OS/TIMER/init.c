@@ -17,6 +17,7 @@ void disable_watch_dog(void)
     WTCON = 0;  // 关闭WATCHDOG很简单，往这个寄存器写0即可
 }
 #define S3C2440_MPLL_200MHZ     ((0x5c<<12)|(0x01<<4)|(0x02))
+#define S3C2440_MPLL_300MHZ     ((0x44<<12)|(0x01<<4)|(0x01))
 /*
  * 对于MPLLCON寄存器，[19:12]为MDIV，[9:4]为PDIV，[1:0]为SDIV
  * 有如下计算公式：
