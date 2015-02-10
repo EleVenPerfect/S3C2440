@@ -51,7 +51,7 @@ void buzzer_freq_set(unsigned int freq)
 }
 int main(void)
 {
-	unsigned int freq =2000;
+	int freq =2000;
 	uart0_init();
 	key_init();
 	buzzer_init();
@@ -64,40 +64,14 @@ int main(void)
 			putccc('z');
 			putccc(10);
 			putccc(13);
-			if(freq <6000)
-				freq+=200;
-			buzzer_freq_set(freq);
 		}
 		if((GPFDAT&0x02)==0)
 		{
 			putccc('x');
 			putccc(10);
 			putccc(13);
-			if(freq >200)
-				freq-=200;
-			delay(200);
-			buzzer_freq_set(freq);
-		}
-		
-		if(freq<10000&&freq>=1000)
-		{
-			putccc(freq/1000%10+0x30);
-			putccc(freq/100%10+0x30);
-			putccc(freq/10%10+0x30);
-			putccc(freq%10+0x30);
-			putccc(10);
-			putccc(13);
-		}
-		
-		if(freq<1000&&freq>=100)
-		{
-			putccc(freq/100%10+0x30);
-			putccc(freq/10%10+0x30);
-			putccc(freq%10%10+0x30);
-			putccc(10);
-			putccc(13);
-		}
-		
+		}	
+
 		delay(200);
 	}
 }
