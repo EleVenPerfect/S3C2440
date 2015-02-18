@@ -1,1 +1,7 @@
 本程序为TQ2440开发板为基础，所有代码可以在TQ2440开发板上运行，其他开发板不能保证。
+
+1.simple loader：这个是一个精简的bootloader，并不是uboot。使用交叉编译环境编译，只能实现对天嵌移植的linux内核直接引导。
+
+2.TQ source ：这个是天嵌公司的uboot源码，版本1.1.6.
+
+3.TQ loader ：这个是天嵌官方精简的bootloader，使用ADS编译，本人未测试。
