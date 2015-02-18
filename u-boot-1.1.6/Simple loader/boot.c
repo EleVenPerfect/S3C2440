@@ -28,7 +28,7 @@ void setup_memory_tags(void)
 	params->hdr.size = tag_size (tag_mem32);
 	
 	params->u.mem.start = 0x30000000;
-	params->u.mem.size  = 64*1024*1024;
+	params->u.mem.size  = 0x04000000;
 	
 	params = tag_next (params);
 }
@@ -77,7 +77,7 @@ int main(void)
 	
 	/* 1. 从NAND FLASH里把内核读入内存 */
 	puts("Copy kernel from nand\n\r");
-	nand_read(0x60000+64, (unsigned char *)0x30008000, 0x200000);
+	nand_read(0x00200000, (unsigned char *)0x30008000, 0x300000);
 	puthex(0x1234ABCD);
 	puts("\n\r");
 	puthex(*p);
@@ -87,13 +87,14 @@ int main(void)
 	puts("Set boot params\n\r");
 	setup_start_tag();
 	setup_memory_tags();
-	setup_commandline_tag("noinitrd root=/dev/mtdblock3 init=/linuxrc console=ttySAC0");
+	setup_commandline_tag("noinitrd root=/dev/mtdblock2 init=/linuxrc console=ttySAC0");
 	setup_end_tag();
 
 	/* 3. 跳转执行 */
 	puts("Boot kernel\n\r");
 	theKernel = (void (*)(int, int, unsigned int))0x30008000;
-	theKernel(0, 362, 0x30000100);  
+
+	theKernel(0, 168, 0x30000100);  
 	/* 
 	 *  mov r0, #0
 	 *  ldr r1, =362
@@ -106,3 +107,4 @@ int main(void)
 
 	return -1;
 }
+
