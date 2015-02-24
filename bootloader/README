@@ -5,3 +5,5 @@
 2.u-boot-1.1.6 TQ source ：这个是天嵌移植好的uboot源码，版本1.1.6.
 
 3.TQ loader ：这个是天嵌官方精简的bootloader，使用ADS编译，本人未测试。
+
+4.u-boot-2014.10 for tq2440 ：这个是我对uboot近期版本的移植。《注：当前尚未完成》
