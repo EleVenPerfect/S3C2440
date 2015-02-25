@@ -6,4 +6,8 @@
 
 3.TQ loader ：这个是天嵌官方精简的bootloader，使用ADS编译，本人未测试。
 
-4.u-boot-2014.10 for tq2440 ：这个是我对uboot近期版本的移植。《注：当前尚未完成》
+4.u-boot-2014.04 for tq2440 ：这个是我对uboot近期版本的移植。
+  参考自：http://wenku.baidu.com/link?url=vrTM9lX5n-f9H8iKauy2Ca1wJWVGvdjfLpfJATuAmK4iiNxs9RMq70iOamgofcHjQvhEW6klmY-WHUJE4iF65_dGoA7LT_H-BmE5-n1hb3S
+  参考自：韦东山。
+  《注：当前尚未完成》
+5.null
