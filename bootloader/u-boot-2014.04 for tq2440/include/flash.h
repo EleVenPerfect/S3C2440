@@ -149,10 +149,10 @@ extern flash_info_t *flash_get_info(ulong base);
 #define ATM_MANUFACT	0x001F001F	/* ATMEL */
 #define STM_MANUFACT	0x00200020	/* STM (Thomson) manuf. ID in D23.. -"- */
 #define SST_MANUFACT	0x00BF00BF	/* SST	   manuf. ID in D23..D16, D7..D0 */
-#define MT_MANUFACT	0x00890089	/* MT	   manuf. ID in D23..D16, D7..D0 */
+#define MT_MANUFACT		0x00890089	/* MT	   manuf. ID in D23..D16, D7..D0 */
 #define INTEL_MANUFACT	0x00890089	/* INTEL   manuf. ID in D23..D16, D7..D0 */
 #define INTEL_ALT_MANU	0x00B000B0	/* alternate INTEL namufacturer ID	*/
-#define MX_MANUFACT	0x00C200C2	/* MXIC	   manuf. ID in D23..D16, D7..D0 */
+#define MX_MANUFACT		0x00C200C2	/* MXIC	   manuf. ID in D23..D16, D7..D0 */
 #define TOSH_MANUFACT	0x00980098	/* TOSHIBA manuf. ID in D23..D16, D7..D0 */
 #define MT2_MANUFACT	0x002C002C	/* alternate MICRON manufacturer ID*/
 #define EXCEL_MANUFACT	0x004A004A	/* Excel Semiconductor			*/
@@ -160,7 +160,7 @@ extern flash_info_t *flash_get_info(ulong base);
 #define WINB_MANUFACT	0x00DA00DA	/* Winbond manuf. ID in D23..D16, D7..D0 */
 
 /* Manufacturers inside bank 1 have ids like 0x01xx01xx */
-#define EON_MANUFACT	0x011C011C	/* EON     manuf. ID in D23..D16, D7..D0 */
+#define EN_MANUFACT	0x011C011C	/* EON     manuf. ID in D23..D16, D7..D0 */
 
 /* Manufacturers inside bank 2 have ids like 0x02xx02xx */
 

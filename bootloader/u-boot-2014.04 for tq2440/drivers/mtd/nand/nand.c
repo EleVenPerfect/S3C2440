@@ -100,14 +100,14 @@ static void nand_init_chip(int i)
 
 void nand_init(void)
 {
-#ifdef CONFIG_SYS_NAND_SELF_INIT
-	board_nand_init();
-#else
+//#ifdef CONFIG_SYS_NAND_SELF_INIT
+//	board_nand_init();
+//#else
 	int i;
 
 	for (i = 0; i < CONFIG_SYS_MAX_NAND_DEVICE; i++)
 		nand_init_chip(i);
-#endif
+//#endif
 
 	printf("%lu MiB\n", total_nand_size / 1024);
 

@@ -16,7 +16,6 @@
 
 /* The DEBUG define must be before common to enable debugging */
 /* #define DEBUG	*/
-
 #include <common.h>
 #include <asm/processor.h>
 #include <asm/io.h>
